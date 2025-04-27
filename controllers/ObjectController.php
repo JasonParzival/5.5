@@ -5,7 +5,7 @@ class ObjectController extends BasePortalTwigController {
     public $template = "";
     public $temp = "";
 
-    public function get() {
+    public function get(array $context) {
         $show = $_GET['show'] ?? '';
         switch($show) {
             case 'image':
@@ -20,7 +20,7 @@ class ObjectController extends BasePortalTwigController {
                 $this->template = "main_window_object.twig";
                 $this->temp = "";
         }
-        parent::get();
+        parent::get($context);
     }
 
     public function getContext(): array
