@@ -4,7 +4,7 @@ class BasePortalTwigController extends TwigBaseController {
     {
         $context = parent::getContext(); 
         
-        $query = $this->pdo->query("SELECT DISTINCT type FROM portal_characters ORDER BY 1");
+        $query = $this->pdo->query("SELECT DISTINCT name FROM portal_types ORDER BY 1");
 
         $types = $query->fetchAll();
 

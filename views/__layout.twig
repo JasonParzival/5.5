@@ -24,7 +24,7 @@
                         </li>
                         {% for type in types %}
                             <li class="nav-item">
-                                <a class="nav-link" href="/?type={{ type.type }}">{{ type.type|title }}</a>
+                                <a class="nav-link" href="/?type={{ type.name }}">{{ type.name|title }}</a>
                             </li>
                         {% endfor %}
                         <li class="nav-item">
@@ -32,6 +32,9 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="/create">Добавить</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/types">Типы</a>
                         </li>
                     </ul>
                 </div>
